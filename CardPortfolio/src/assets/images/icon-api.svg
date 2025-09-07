@@ -1,0 +1,35 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">API Integration</title>
+  <desc id="desc">Two services connected by bi-directional arrows with an API badge</desc>
+
+  <!-- COLORS from your reference -->
+  <!-- Light:  #FFDB6E  |  Dark:  #FFBC5E -->
+
+  <!-- Left service card -->
+  <rect x="4" y="12" width="20" height="40" rx="6" fill="#FFDB6E" stroke="#FFBC5E" stroke-width="2"/>
+  <circle cx="14" cy="24" r="3" fill="#FFBC5E"/>
+  <circle cx="14" cy="34" r="3" fill="#FFBC5E"/>
+  <circle cx="14" cy="44" r="3" fill="#FFBC5E"/>
+
+  <!-- Right service card -->
+  <rect x="40" y="12" width="20" height="40" rx="6" fill="#FFDB6E" stroke="#FFBC5E" stroke-width="2"/>
+  <circle cx="50" cy="24" r="3" fill="#FFBC5E"/>
+  <circle cx="50" cy="34" r="3" fill="#FFBC5E"/>
+  <circle cx="50" cy="44" r="3" fill="#FFBC5E"/>
+
+  <!-- Center arrows (bi-directional data flow) -->
+  <path d="M24 24h16" fill="none" stroke="#FFBC5E" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M40 24l-3-3m3 3l-3 3" fill="none" stroke="#FFBC5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40 40H24" fill="none" stroke="#FFBC5E" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M24 40l3-3m-3 3l3 3" fill="none" stroke="#FFBC5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- API badge -->
+  <g transform="translate(22,27)">
+    <rect x="0" y="0" width="20" height="10" rx="5" fill="#FFBC5E" />
+    <text x="10" y="7" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="6" text-anchor="middle" fill="#FFDB6E" font-weight="700">API</text>
+  </g>
+
+  <!-- subtle curly braces to suggest endpoints/spec -->
+  <path d="M22 14c-4 0-6 2-6 6v2c0 1-1 2-2 2 1 0 2 1 2 2v2c0 4 2 6 6 6" fill="none" stroke="#FFDB6E" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+  <path d="M42 14c4 0 6 2 6 6v2c0 1 1 2 2 2-1 0-2 1-2 2v2c0 4-2 6-6 6" fill="none" stroke="#FFDB6E" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+</svg>
