@@ -16,9 +16,9 @@ export default function About() {
         <p>
           I'm a passionate Full-Stack Developer specializing in the MERN stack.
           I enjoy building modern, scalable, and user-friendly web applications.
-          With strong expertise in React, Tailwind CSS, Node.js, Express, and
-          MongoDB, I create solutions that are functional, efficient, and
-          visually appealing.
+          With strong expertise in React, Tailwind CSS, Node.js, Express,
+          Next.js, TypeScript, and MongoDB or MySQL, I create solutions that are
+          functional, efficient, and visually appealing.
         </p>
         <p>
           My aim is to design and develop applications that deliver seamless

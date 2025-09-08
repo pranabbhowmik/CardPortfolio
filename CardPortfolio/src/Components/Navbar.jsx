@@ -5,27 +5,52 @@ export default function Navbar() {
     <nav className="navbar">
       <ul className="navbar-list">
         <li>
-          <NavLink to="/" className="navbar-link">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `navbar-link ${isActive ? "active" : ""}`
+            }
+          >
             About
           </NavLink>
         </li>
         <li>
-          <NavLink to="/resume" className="navbar-link">
+          <NavLink
+            to="/resume"
+            className={({ isActive }) =>
+              `navbar-link ${isActive ? "active" : ""}`
+            }
+          >
             Resume
           </NavLink>
         </li>
         <li>
-          <NavLink to="/portfolio" className="navbar-link">
+          <NavLink
+            to="/portfolio"
+            className={({ isActive }) =>
+              `navbar-link ${isActive ? "active" : ""}`
+            }
+          >
             Portfolio
           </NavLink>
         </li>
         <li>
-          <NavLink to="/blog" className="navbar-link">
+          <NavLink
+            to="/blog"
+            className={({ isActive }) =>
+              `navbar-link ${isActive ? "active" : ""}`
+            }
+          >
             Blog
           </NavLink>
         </li>
         <li>
-          <NavLink to="/contact" className="navbar-link">
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              `navbar-link ${isActive ? "active" : ""}`
+            }
+          >
             Contact
           </NavLink>
         </li>
