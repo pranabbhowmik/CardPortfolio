@@ -30,7 +30,7 @@ export default function About() {
       <Service />
       <Testimonials />
       <Skills />
-      <Clients />
+      {/* <Clients /> */}
     </article>
   );
 }

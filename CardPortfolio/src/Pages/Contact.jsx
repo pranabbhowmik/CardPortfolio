@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -6,6 +9,9 @@ export default function Contact() {
     email: "",
     message: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
+
+  const formRef = useRef();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -13,8 +19,30 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Submitted:", formData);
-    // You can integrate EmailJS, Nodemailer, or backend API here
+    setIsLoading(true);
+
+    emailjs
+      .sendForm("service_ibub44c", "template_glq6jph", formRef.current, {
+        publicKey: "ObnkQm06WHHN-hv5B",
+      })
+      .then(() => {
+        toast.success("Message sent successfully!", {
+          position: "top-center",
+          autoClose: 3000,
+        });
+        setFormData({ fullname: "", email: "", message: "" });
+        formRef.current.reset();
+      })
+      .catch((error) => {
+        toast.error("Failed to send message. Please try again.", {
+          position: "top-center",
+          autoClose: 3000,
+        });
+        console.error("FAILED...", error.text);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -40,7 +68,7 @@ export default function Contact() {
       <section className="contact-form">
         <h3 className="h3 form-title">Contact Form</h3>
 
-        <form onSubmit={handleSubmit} className="form" data-form>
+        <form ref={formRef} onSubmit={handleSubmit} className="form" data-form>
           <div className="input-wrapper">
             <input
               type="text"
@@ -76,12 +104,17 @@ export default function Contact() {
             className="form-btn"
             type="submit"
             disabled={
-              !formData.fullname || !formData.email || !formData.message
+              isLoading ||
+              !formData.fullname ||
+              !formData.email ||
+              !formData.message
             }
           >
-            <span>Send Message</span>
+            {isLoading ? <span>Sending...</span> : <span>Send Message</span>}
           </button>
         </form>
+
+        <ToastContainer />
       </section>
     </article>
   );
