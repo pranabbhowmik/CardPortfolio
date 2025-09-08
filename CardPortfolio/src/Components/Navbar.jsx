@@ -31,7 +31,7 @@ export default function Navbar() {
               `navbar-link ${isActive ? "active" : ""}`
             }
           >
-            Portfolio
+            Projects
           </NavLink>
         </li>
         <li>

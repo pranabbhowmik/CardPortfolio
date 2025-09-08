@@ -1,46 +1,26 @@
 import React from "react";
-import python from "../assets/images/python.png";
-import html from "../assets/images/html.png";
-import js from "../assets/images/jwt.png";
-import react from "../assets/images/react.png";
+import enchanting from "../assets/images/enchentingpet.png";
+import pavana from "../assets/images/pavanamoon.png";
+import lynkloom from "../assets/images/lynkloom.png";
 const clients = [
   {
     id: 1,
-    img: python,
+    img: enchanting,
     alt: "Client logo 1",
-    link: "#",
+    link: "https://www.enchantingpets.com/",
   },
   {
     id: 2,
-    img: html,
+    img: pavana,
     alt: "Client logo 2",
-    link: "#",
+    link: "https://pavanamoonlightcamping.com/",
   },
   {
     id: 3,
-    img: js,
+    img: lynkloom,
     alt: "Client logo 3",
-    link: "#",
+    link: "https://lynkloom.com/",
   },
-
-  {
-    id: 4,
-    img: react,
-    alt: "Client logo 4",
-    link: "#",
-  },
-  //   {
-  //     id: 5,
-  //     img: "./assets/images/logo-5-color.png",
-  //     alt: "Client logo 5",
-  //     link: "#",
-  //   },
-  //   {
-  //     id: 6,
-  //     img: "./assets/images/logo-6-color.png",
-  //     alt: "Client logo 6",
-  //     link: "#",
-  //   },
 ];
 
 const Clients = () => {

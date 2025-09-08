@@ -1434,11 +1434,15 @@ textarea.form-input::-webkit-resizer {
   }
 
   .avatar-box {
-    border-radius: 30px;
+    border-radius: 15px;
+  }
+  #avatar {
+    border-radius: 10%;
   }
 
   .avatar-box img {
-    width: 120px;
+    width: 110px;
+    padding-bottom: 3px;
   }
 
   .info-content .name {
