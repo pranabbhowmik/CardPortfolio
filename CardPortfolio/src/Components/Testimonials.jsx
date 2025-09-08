@@ -6,21 +6,21 @@ import komal from "../assets/images/avatar-2.png";
 const testimonials = [
   {
     avatar: gourav,
-    alt: "Gourav Nigam",
-    name: "Gourav Nigam",
-    text: "Working with you was an amazing experience! The frontend you built was modern, responsive, and perfectly matched our vision.",
+    alt: "Gourav Nikam",
+    name: "Gourav Nikam",
+    text: "As Pranab’s manager, I’ve seen his growth as a Full-Stack Developer in our company. His ability to handle both frontend and backend with precision has been a huge asset to our projects.",
   },
   {
     avatar: yuvrajj,
-    alt: "Yuvraaj Singh Dodiya",
-    name: "Yuvraaj Singh Dodiya",
-    text: "You developed a backend for our project that was both secure and scalable. Really impressed with your knowledge of Node.js and MongoDB.",
+    alt: "Yubraj Singh",
+    name: "Yubraj Singh",
+    text: "Pranab integrated APIs seamlessly with the React frontend of our project, using Redux for smooth state management. His technical skills and timely delivery made the collaboration effortless.",
   },
   {
     avatar: samim,
-    alt: "Samim Sk",
-    name: "Samim Sk",
-    text: "Your full-stack expertise made our application smooth and user-friendly. From authentication to payments, everything works flawlessly.",
+    alt: "Sk Samim",
+    name: "Sk Samim",
+    text: "Working with my friend Pranab is always fun and his coding skills make even the toughest tasks look easy.",
   },
   {
     avatar: komal,
