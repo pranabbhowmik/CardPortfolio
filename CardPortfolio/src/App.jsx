@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import About from "./pages/About";
+
 import Navbar from "./Components/Navbar";
 import "./index.css";
 import Portfolio from "./Pages/Portfolio";
@@ -7,6 +7,7 @@ import Resume from "./Pages/Resume";
 import Sidebar from "./Components/Sidebar";
 import Blog from "./Pages/Blog";
 import Contact from "./Pages/Contact";
+import About from "./pages/About";
 function App() {
   return (
     <Router>
