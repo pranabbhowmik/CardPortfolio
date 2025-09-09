@@ -19,13 +19,17 @@ import helmet from "../assets/images/reacthelmet.png";
 import typescript from "../assets/images/typescript.png";
 import tenstack from "../assets/images/tenstack.png";
 import mongo from "../assets/images/mongo.png";
+import nextjs from "../assets/images/nextjs.png";
+import Stripe from "../assets/images/stripe.png";
+import zod from "../assets/images/zod.png";
 // Example skill logos (replace with your paths)
 const skills = [
   { id: 1, img: c },
   { id: 2, img: js },
   { id: 3, img: python },
   { id: 4, img: react },
-  { id: 5, img: jwt },
+  { id: 5, img: nextjs },
+
   { id: 6, img: github },
   { id: 7, img: redux },
   { id: 8, img: mysql },
@@ -41,6 +45,9 @@ const skills = [
   { id: 18, img: nodejs },
   { id: 19, img: postsql },
   { id: 20, img: tenstack },
+  { id: 21, img: jwt },
+  { id: 22, img: Stripe },
+  { id: 23, img: zod },
 ];
 
 const Skills = () => {
