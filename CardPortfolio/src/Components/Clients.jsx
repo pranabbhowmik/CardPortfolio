@@ -1,7 +1,7 @@
 import React from "react";
-import enchanting from "../assets/images/enchentingpet.png";
-import pavana from "../assets/images/pavanamoon.png";
-import lynkloom from "../assets/images/lynkloom.png";
+import enchanting from "../assets/images/enchentingpetLogo.png";
+import pavana from "../assets/images/pavanamoonLogo.png";
+import lynkloom from "../assets/images/LynkloomLogo.png";
 const clients = [
   {
     id: 1,

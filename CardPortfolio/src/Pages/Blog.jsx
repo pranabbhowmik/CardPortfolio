@@ -4,6 +4,7 @@ import Totowala from "../assets/images/totowala-ride.jpg";
 import JustCheers from "../assets/images/Just cheers.jpg";
 import Enchenting from "../assets/images/enchenting.jpg";
 import Lynkloom from "../assets/images/lynkloom.jpg";
+import BlogSeo from "../Components/Seo/BlogSeo";
 const blogs = [
   {
     id: 1,
@@ -65,35 +66,38 @@ const blogs = [
 
 export default function Blog() {
   return (
-    <article className="blog active" data-page="blog">
-      <header>
-        <h2 className="h2 article-title">Blog</h2>
-      </header>
+    <>
+      <BlogSeo />
+      <article className="blog active" data-page="blog">
+        <header>
+          <h2 className="h2 article-title">Blog</h2>
+        </header>
 
-      <section className="blog-posts">
-        <ul className="blog-posts-list">
-          {blogs.map((blog) => (
-            <li className="blog-post-item" key={blog.id}>
-              <a href={blog.link}>
-                <figure className="blog-banner-box">
-                  <img src={blog.image} alt={blog.title} loading="lazy" />
-                </figure>
+        <section className="blog-posts">
+          <ul className="blog-posts-list">
+            {blogs.map((blog) => (
+              <li className="blog-post-item" key={blog.id}>
+                <a href={blog.link}>
+                  <figure className="blog-banner-box">
+                    <img src={blog.image} alt={blog.title} loading="lazy" />
+                  </figure>
 
-                <div className="blog-content">
-                  <div className="blog-meta">
-                    <p className="blog-category">{blog.category}</p>
-                    <span className="dot"></span>
-                    <time dateTime={blog.date}>{blog.displayDate}</time>
+                  <div className="blog-content">
+                    <div className="blog-meta">
+                      <p className="blog-category">{blog.category}</p>
+                      <span className="dot"></span>
+                      <time dateTime={blog.date}>{blog.displayDate}</time>
+                    </div>
+
+                    <h3 className="h3 blog-item-title">{blog.title}</h3>
+                    <p className="blog-text">{blog.description}</p>
                   </div>
-
-                  <h3 className="h3 blog-item-title">{blog.title}</h3>
-                  <p className="blog-text">{blog.description}</p>
-                </div>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
-    </article>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </article>
+    </>
   );
 }

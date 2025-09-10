@@ -9,6 +9,7 @@ import blog from "../assets/images/freexpress.png";
 import genname from "../assets/images/name.png";
 import enchanting from "../assets/images/enchenting.png";
 import { Eye } from "lucide-react";
+import ProjectSeo from "../Components/Seo/ProjectSeo";
 
 export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -93,44 +94,55 @@ export default function Portfolio() {
   ];
 
   return (
-    <article className="portfolio active" data-page="portfolio">
-      <header>
-        <h2 className="h2 article-title">Projects</h2>
-      </header>
+    <>
+      <ProjectSeo />
+      <article className="portfolio active" data-page="portfolio">
+        <header>
+          <h2 className="h2 article-title">Projects</h2>
+        </header>
 
-      <section className="projects">
-        {/* Category buttons */}
-        <ul className="filter-list">
-          {categories.map((cat) => (
-            <li className="filter-item" key={cat}>
-              <button
-                className={selectedCategory === cat ? "active" : ""}
-                onClick={() => setSelectedCategory(cat)}
-              >
-                {cat}
-              </button>
-            </li>
-          ))}
-        </ul>
+        <section className="projects">
+          {/* Category buttons */}
+          <ul className="filter-list">
+            {categories.map((cat) => (
+              <li className="filter-item" key={cat}>
+                <button
+                  className={selectedCategory === cat ? "active" : ""}
+                  onClick={() => setSelectedCategory(cat)}
+                >
+                  {cat}
+                </button>
+              </li>
+            ))}
+          </ul>
 
-        {/* Projects */}
-        <ul className="project-list">
-          {filteredProjects.map((project) => (
-            <li className="project-item active" key={project.id}>
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <figure className="project-img">
-                  <div className="project-item-icon-box">
-                    <Eye size={20} className="eyeicon" />
-                  </div>
-                  <img src={project.image} alt={project.title} loading="lazy" />
-                </figure>
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-category">{project.category}</p>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
-    </article>
+          {/* Projects */}
+          <ul className="project-list">
+            {filteredProjects.map((project) => (
+              <li className="project-item active" key={project.id}>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <figure className="project-img">
+                    <div className="project-item-icon-box">
+                      <Eye size={20} className="eyeicon" />
+                    </div>
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 className="project-title">{project.title}</h3>
+                  <p className="project-category">{project.category}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </article>
+    </>
   );
 }

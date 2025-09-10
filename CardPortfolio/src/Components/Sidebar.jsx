@@ -18,6 +18,7 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 import Avatar from "../assets/images/portfolioavatar.png";
 import "../index.css";
+import Switch from "./Switch";
 
 export default function Sidebar() {
   const [active, setActive] = useState(false);
@@ -35,7 +36,7 @@ export default function Sidebar() {
           </h1>
           <p className="title">Full Stack Developer</p>
         </div>
-
+        <Switch />
         <button
           className="info_more-btn"
           onClick={() => setActive(!active)}
