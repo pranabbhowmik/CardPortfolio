@@ -10,6 +10,7 @@ import genname from "../assets/images/name.png";
 import enchanting from "../assets/images/enchenting.png";
 import { Eye } from "lucide-react";
 import ProjectSeo from "../Components/Seo/ProjectSeo";
+import { Link } from "react-router-dom";
 
 export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -120,8 +121,8 @@ export default function Portfolio() {
           <ul className="project-list">
             {filteredProjects.map((project) => (
               <li className="project-item active" key={project.id}>
-                <a
-                  href={project.link}
+                <Link
+                  to={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -137,7 +138,7 @@ export default function Portfolio() {
                   </figure>
                   <h3 className="project-title">{project.title}</h3>
                   <p className="project-category">{project.category}</p>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

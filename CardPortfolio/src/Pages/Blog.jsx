@@ -5,6 +5,7 @@ import JustCheers from "../assets/images/Just cheers.jpg";
 import Enchenting from "../assets/images/enchenting.jpg";
 import Lynkloom from "../assets/images/lynkloom.jpg";
 import BlogSeo from "../Components/Seo/BlogSeo";
+import { Link } from "react-router-dom";
 const blogs = [
   {
     id: 1,
@@ -60,7 +61,7 @@ const blogs = [
     description:
       "Lynkloom is revolutionizing professional networking with NFC-enabled smart business cards. Share your dynamic profile instantly and make lasting connections.",
     image: Lynkloom,
-    link: "#",
+    link: "/blog/lynkloom",
   },
 ];
 
@@ -77,7 +78,7 @@ export default function Blog() {
           <ul className="blog-posts-list">
             {blogs.map((blog) => (
               <li className="blog-post-item" key={blog.id}>
-                <a href={blog.link}>
+                <Link to={blog.link}>
                   <figure className="blog-banner-box">
                     <img src={blog.image} alt={blog.title} loading="lazy" />
                   </figure>
@@ -92,7 +93,7 @@ export default function Blog() {
                     <h3 className="h3 blog-item-title">{blog.title}</h3>
                     <p className="blog-text">{blog.description}</p>
                   </div>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
