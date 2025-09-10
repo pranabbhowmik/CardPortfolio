@@ -11,6 +11,7 @@ import About from "./pages/About";
 import BlogDetailsTotowala from "./Components/Blogs/Totowala_Blog";
 import BlogDetailsSwachhBangla from "./Components/Blogs/SwachhBangla";
 import BlogDetailsJustCheers from "./Components/Blogs/JustCheers";
+import BlogDetailsEnchantingPets from "./Components/Blogs/EnchantingPets";
 function App() {
   return (
     <Router>
@@ -32,6 +33,10 @@ function App() {
             <Route
               path="/blog/swachh-bangla"
               element={<BlogDetailsSwachhBangla />}
+            />
+            <Route
+              path="/blog/enchanting-pets"
+              element={<BlogDetailsEnchantingPets />}
             />
           </Routes>
         </div>

@@ -4,7 +4,6 @@ import Totowala from "../assets/images/totowala-ride.jpg";
 import JustCheers from "../assets/images/Just cheers.jpg";
 import Enchenting from "../assets/images/enchenting.jpg";
 import Lynkloom from "../assets/images/lynkloom.jpg";
-// Sample blog data (you can fetch this later from API or CMS)
 const blogs = [
   {
     id: 1,
@@ -26,7 +25,7 @@ const blogs = [
     description:
       "Enchanting Pets combines love for animals with technology, offering an online store where pet owners can shop for quality products and essentials for their furry companions.",
     image: Enchenting,
-    link: "#",
+    link: "/blog/enchanting-pets",
   },
 
   {
