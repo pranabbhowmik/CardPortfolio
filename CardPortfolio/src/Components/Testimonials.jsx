@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import gourav from "../assets/images/avatar-1.png";
 import yuvrajj from "../assets/images/avatar-5.png";
 import samim from "../assets/images/my-avatar.png";
 import komal from "../assets/images/avatar-2.png";
+
 const testimonials = [
   {
     avatar: gourav,
@@ -31,37 +32,91 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const [selectedTestimonial, setSelectedTestimonial] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    setIsModalOpen(!!selectedTestimonial);
+  }, [selectedTestimonial]);
+
+  const openModal = (testimonial) => {
+    setSelectedTestimonial(testimonial);
+  };
+
+  const closeModal = () => {
+    setSelectedTestimonial(null);
+  };
+
   return (
     <section className="testimonials">
       <h3 className="h3 testimonials-title">Testimonials</h3>
 
-      <ul className="testimonials-list has-scrollbar">
-        {testimonials.map((item, index) => (
-          <li className="testimonials-item" key={index}>
-            <div className="content-card" data-testimonials-item>
-              <figure className="testimonials-avatar-box">
+      <div className="testimonials-container">
+        <ul className="testimonials-list has-scrollbar">
+          {testimonials.map((item, index) => (
+            <li className="testimonials-item" key={index}>
+              <div
+                className="content-card"
+                data-testimonials-item
+                onClick={() => openModal(item)}
+                style={{ cursor: "pointer" }}
+              >
+                <figure className="testimonials-avatar-box">
+                  <img
+                    src={item.avatar}
+                    alt={item.alt}
+                    width="60"
+                    data-testimonials-avatar
+                  />
+                </figure>
+
+                <h4
+                  className="h4 testimonials-item-title"
+                  data-testimonials-title
+                >
+                  {item.name}
+                </h4>
+
+                <div className="testimonials-text" data-testimonials-text>
+                  <p>{item.text}</p>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {selectedTestimonial && (
+        <>
+          <div
+            className={`overlay ${isModalOpen ? "active" : ""}`}
+            onClick={closeModal}
+          />
+          <div className={`modal-container ${isModalOpen ? "active" : ""}`}>
+            <div className="testimonials-modal">
+              <button
+                className="modal-close-btn"
+                onClick={closeModal}
+                data-modal-close-btn
+                style={{ fontSize: "20px" }}
+              >
+                ✕
+              </button>
+              <figure className="modal-avatar-box">
                 <img
-                  src={item.avatar}
-                  alt={item.alt}
-                  width="60"
-                  data-testimonials-avatar
+                  src={selectedTestimonial.avatar}
+                  alt={selectedTestimonial.alt}
+                  width="80"
                 />
               </figure>
-
-              <h4
-                className="h4 testimonials-item-title"
-                data-testimonials-title
-              >
-                {item.name}
-              </h4>
-
-              <div className="testimonials-text" data-testimonials-text>
-                <p>{item.text}</p>
+              <h4 className="h4 modal-title">{selectedTestimonial.name}</h4>
+              <div className="modal-content">
+                <p>{selectedTestimonial.text}</p>
               </div>
             </div>
-          </li>
-        ))}
-      </ul>
+          </div>
+        </>
+      )}
     </section>
   );
 }
