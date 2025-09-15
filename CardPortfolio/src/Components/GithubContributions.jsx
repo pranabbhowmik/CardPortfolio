@@ -29,8 +29,11 @@ const GithubContributions = () => {
           { query },
           {
             headers: {
-              Authorization: `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`, // <-- or import.meta.env.VITE_GITHUB_TOKEN for Vite
+              Authorization:
+                "Bearer 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",
               "Content-Type": "application/json",
+              Accept: "application/json",
+              "X-GitHub-Api-Version": "2022-11-28",
             },
           }
         );
