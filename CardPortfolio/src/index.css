@@ -2201,3 +2201,32 @@ textarea.form-input::-webkit-resizer {
 .tech-card:hover {
   transform: scale(1.05);
 }
+
+/* github */
+/* GitHub Contribution Grid */
+.github-section {
+  margin: 40px 0;
+  padding: 20px;
+  background: var(--eerie-black-2);
+  border-radius: 16px;
+  box-shadow: var(--shadow-2);
+}
+
+.github-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12px, 1fr));
+  gap: 3px;
+  max-width: 100%;
+}
+
+.github-day {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.github-day:hover {
+  transform: scale(1.2);
+  opacity: 0.9;
+}
