@@ -53,7 +53,7 @@ const skills = [
 const Skills = () => {
   return (
     <section className="skills-section">
-      <h3 className="skills-title">My Skills</h3>
+      <h3 className="h3 testimonials-title">My Skills</h3>
       <div className="skills-grid">
         {skills.map((skill) => (
           <div className="skill-card" key={skill.id}>

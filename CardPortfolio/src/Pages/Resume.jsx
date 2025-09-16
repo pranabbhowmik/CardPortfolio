@@ -2,7 +2,7 @@ import React from "react";
 import { Book, BriefcaseBusiness } from "lucide-react"; // using lucide-react icons (lightweight)
 import ResumeSeo from "../Components/Seo/ResumeSeo";
 import GithubContributions from "../Components/GithubContributions";
-
+import Clients from "../Components/Clients";
 export default function Resume() {
   // Education Data
   const education = [
@@ -95,7 +95,7 @@ export default function Resume() {
             ))}
           </ol>
         </section>
-        <GithubContributions />
+        <Clients />
       </article>
     </>
   );

@@ -13,6 +13,7 @@ import BlogDetailsSwachhBangla from "./Components/Blogs/SwachhBangla";
 import BlogDetailsJustCheers from "./Components/Blogs/JustCheers";
 import BlogDetailsEnchantingPets from "./Components/Blogs/EnchantingPets";
 import BlogDetailsLynkloom from "./Components/Blogs/Lynkloom";
+import BlogDetailsReactRouting from "./Components/Blogs/ReacrError";
 function App() {
   return (
     <Router>
@@ -40,6 +41,10 @@ function App() {
               element={<BlogDetailsEnchantingPets />}
             />
             <Route path="/blog/lynkloom" element={<BlogDetailsLynkloom />} />
+            <Route
+              path="/blog/react-refresh-error"
+              element={<BlogDetailsReactRouting />}
+            />
           </Routes>
         </div>
       </main>

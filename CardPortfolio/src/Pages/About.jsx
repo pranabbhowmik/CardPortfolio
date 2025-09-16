@@ -1,4 +1,4 @@
-import Clients from "../Components/Clients";
+import GithubContributions from "../Components/GithubContributions";
 import AboutSeo from "../Components/Seo/AboutSeo";
 import Service from "../Components/Services";
 import Skills from "../Components/Skill";
@@ -31,9 +31,10 @@ export default function About() {
           </p>
         </section>
         <Service />
-        <Testimonials />
         <Skills />
-        <Clients />
+        <GithubContributions />
+        <br />
+        <Testimonials />
       </article>
     </>
   );

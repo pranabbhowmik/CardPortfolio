@@ -4,6 +4,7 @@ import Totowala from "../assets/images/totowala-ride.jpg";
 import JustCheers from "../assets/images/Just cheers.jpg";
 import Enchenting from "../assets/images/enchenting.jpg";
 import Lynkloom from "../assets/images/lynkloom.jpg";
+import ReactErrorImage from "../assets/images/react1.png";
 import BlogSeo from "../Components/Seo/BlogSeo";
 import { Link } from "react-router-dom";
 const blogs = [
@@ -22,27 +23,38 @@ const blogs = [
     id: 2,
     title: "Enchanting Pets: A Modern Pet Store Experience",
     category: "Ecommerce",
-    date: "2025-02-02",
-    displayDate: "Feb 2, 2025",
+    date: "2025-02-20",
+    displayDate: "Feb 20, 2025",
     description:
       "Enchanting Pets combines love for animals with technology, offering an online store where pet owners can shop for quality products and essentials for their furry companions.",
     image: Enchenting,
     link: "/blog/enchanting-pets",
   },
-
   {
     id: 3,
+    title: "React App: Fixing Page Not Found on Refresh After Deployment",
+    category: "Development",
+    date: "2025-02-12",
+    displayDate: "Feb 12, 2025",
+    description:
+      "Deployed React apps show Page Not Found on refresh because servers can't find the route. This guide explains the client-side routing issue and provides server-side fixes....",
+    image: ReactErrorImage,
+    link: "/blog/react-refresh-error",
+  },
+
+  {
+    id: 4,
     title: "JustCheers: Your Online Alcohol Store with Seamless Payments",
     category: "Ecommerce",
     date: "2024-08-15",
     displayDate: "Aug 15, 2024",
     description:
-      "JustCheers is an alcohol e-commerce platform offering a wide range of beverages with secure online payment integration. Bringing convenience and celebration right to your doorstep.",
+      "JustCheers is an alcohol e-commerce platform offering a wide range of beverages with secure online payment integration. Bringing convenience and celebration right to your doorstep...",
     image: JustCheers,
     link: "/blog/just-cheers",
   },
   {
-    id: 4,
+    id: 5,
     title: "Totowala: Redefining Local Rides with E-Rickshaw Booking",
     category: "Mobility",
     date: "2024-06-05",
@@ -53,7 +65,7 @@ const blogs = [
     link: "/blog/totowala",
   },
   {
-    id: 5,
+    id: 6,
     title: "Lynkloom: The Future of Networking with NFC Smart Cards",
     category: "Innovation",
     date: "2024-11-20",
