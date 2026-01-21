@@ -7,7 +7,7 @@ import Resume from "./Pages/Resume";
 import Sidebar from "./Components/Sidebar";
 import Blog from "./Pages/Blog";
 import Contact from "./Pages/Contact";
-import About from "./pages/About";
+import About from "./Pages/About";
 import BlogDetailsTotowala from "./Components/Blogs/Totowala_Blog";
 import BlogDetailsSwachhBangla from "./Components/Blogs/SwachhBangla";
 import BlogDetailsJustCheers from "./Components/Blogs/JustCheers";

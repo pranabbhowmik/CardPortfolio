@@ -26,9 +26,15 @@ export default function Resume() {
   // Experience Data
   const experience = [
     {
+      title: "Software Developer",
+      company: "Trans Global Geomatics Pvt Ltd",
+      year: "Nov 2025 — Present",
+      desc: "Software Developer at Trans Global Geomatics Pvt. Ltd., working on the Government of West Bengal’s VLTS (Vehicle Location Tracking System) project. Developing real-time vehicle tracking and map-based applications using React.js and Leaflet.js, and building efficient backend APIs with Python (FastAPI) to support live GPS data, system performance, and reliability.",
+    },
+    {
       title: " Associate Software Engineer",
       company: "Valourithm Technologies",
-      year: "Jan 2025 — Present",
+      year: "Jan 2025 — May 2026",
       desc: "Mern Stack Developer at Valourithm Technologies, building dynamic web applications with React, Next.js, Node.js, and Mysql, ensuring seamless user experiences.",
     },
     {
@@ -36,12 +42,6 @@ export default function Resume() {
       company: "Kalpyaan Technology",
       year: "Nov 2024 — Jan 2025",
       desc: "Engineered web applications with React.js, Tailwind CSS, and Redux, improving performance efficiency by 15%. Collaborated with cross-functional teams, reducing feature deployment cycles by 10%.",
-    },
-    {
-      title: "Web Developer",
-      company: "Insu Creation",
-      year: "May 2024 — Oct 2024",
-      desc: "Web Developer Intern at Insucreation, crafting dynamic websites with HTML, CSS, and JavaScript.",
     },
   ];
 
